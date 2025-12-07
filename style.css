@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.Main-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.Main-container:hover {
+    transform: translateY(-5px);
+}
+
+.Input-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.city-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.search-Btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+}
+
+.search-Btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.search-Btn .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.Weather-info {
+    text-align: center;
+}
+
+.location-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location .material-symbols-outlined {
+    color: #667eea;
+    font-size: 24px;
+}
+
+.country-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.current-date-txt {
+    font-size: 14px;
+    color: #666;
+}
+
+.weather-summary-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.weather-summary-img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-summary-info {
+    text-align: left;
+}
+
+.temp-txt {
+    font-size: 48px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.condition-txt {
+    font-size: 20px;
+    color: #666;
+}
+
+.weather-conditions-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 15px;
+    flex: 1;
+    margin: 0 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.condition-item .material-symbols-outlined {
+    color: #667eea;
+    font-size: 28px;
+}
+
+.condition-info h4 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.condition-info h5 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.forecast-items-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.forecast-item {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.forecast-item:hover {
+    transform: translateY(-5px);
+}
+
+.forecast-item-date {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.forecast-item-img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.forecast-item-temp {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.section-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.section-message img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.section-message h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-message h4 {
+    font-size: 16px;
+    color: #666;
+}
+
+.search-city,
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.map-section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.map-container {
+    width: 90%;
+    max-width: 700px;
+    height: 350px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid #4b70f5;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease-in-out;
+}
+
+
+.map-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background: #4b70f5;
+    color: #fff;
+    border-radius: 6px !important;
+}
+
+.leaflet-control-attribution {
+    display: none;
+    
+}
+
+
+@media (max-width: 480px) {
+    .map-container {
+        height: 260px;
+    }
+}
+
+.location-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #4b70f5;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 6px 12px rgba(75, 112, 245, 0.4);
+    transition: 0.3s ease;
+}
+
+.location-btn:hover {
+    background: #3a5bda;
+    box-shadow: 0px 8px 18px rgba(75, 112, 245, 0.55);
+    transform: translateY(-2px);
+}
+
+.location-btn:active {
+    transform: scale(0.97);
+}
+
+
+.location-btn i {
+    font-size: 18px;
+}
+
+
+
+/* 
+@media (max-width: 480px) {
+    .Main-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .weather-summary-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .weather-conditions-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .condition-item {
+        margin: 0;
+    }
+
+    .forecast-items-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .forecast-item {
+        flex: none;
+    }
+} */
